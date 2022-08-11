@@ -67,7 +67,7 @@ class GenerateImages:
                                 OVERVIEW_FILE_NAME), "r") as f:
             output = f.read()
 
-        name = (await self.__stats.name) \
+        name = (await self.__stats.name) + "'" \
             if (await self.__stats.name)[-1] == "s" \
             else (await self.__stats.name) + "'s"
         output = sub("{{ name }}",
