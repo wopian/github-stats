@@ -35,8 +35,8 @@ jobs:
           python3 generate.py
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          EXCLUDED: "GoogleChrome/workbox,JanDeDobbeleeer/oh-my-posh,alexcosta97/mac-setup,alexcosta97/web-apps-project,apideck-libraries/better-ajv-errors,hummingbird-me/kitsu-server,hummingbird-me/kitsu-tools,hummingbird-me/kitsu-web,hussein181/C0699PropertyProject,jstrieb/github-stats,jwoods02/Mosaic-Island-Timesheet-System,jwoods02/game.jwoods.me,otakulogy/anime-streaming,tonsky/FiraCode,visionmedia/superagent,wopian/AnimeTierList,wopian/advent-of-code,wopian/base-65503,wopian/bnu-mobile-systems,wopian/bobstudios-client,wopian/bucks-new-university,wopian/co666,wopian/co666-refresher-app,wopian/co666-reminders,wopian/codingame,wopian/conventional-changelog-angular-all-2,wopian/css-houdini.rocks,wopian/dot,wopian/ember-responsive,wopian/enterprise-systems-development,wopian/github-stats,wopian/hatayama,wopian/hatayama-app,wopian/kitsu-anime-by-scores,wopian/kitsu-csp,wopian/kitsu-inactivity-pruner,wopian/kitsu-missing-enddates,wopian/kitsu-popular-grabber,wopian/kitsu-post-bumper,wopian/kitsu-season-grabber,wopian/land-registry-api,wopian/lunar-lander,wopian/oo-systems-development,wopian/open-source-systems,wopian/open-source-systems-2,wopian/random-number-game,wopian/setup-node-test,wopian/skylark,wopian/tracker-killer,wopian/whatpulse-stats,wopian/wopian.moe,wopian/wwmcc,wopian/yannic.world-client"
-          EXCLUDED_LANGS: "Objective-C,ShaderLab,HLSL,PLpgSQL,Perl,Text,Go,Nunjucks,Makefile,Clojure,Inno Setup,Assembly,Java,PHP,C++,INI,C,NSIS,Gherkin,YAML"
+          EXCLUDED: ${{ vars.EXCLUDED_REPOS }}
+          EXCLUDED_LANGS: ${{ vars.EXCLUDED_LANGS }}
           INCLUDE_FORKED_REPOS: true
           EXCLUDE_CONTRIB_REPOS: false
           EXCLUDE_ARCHIVE_REPOS: false
