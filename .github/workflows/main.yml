@@ -30,7 +30,7 @@ jobs:
       - name: Install requirements
         run: |
           pip3 install -r pip setuptools wheel
-          pip3 install -r -r requirements.txt
+          pip3 install -r requirements.txt
       - name: Generate images
         run: |
           python3 --version
