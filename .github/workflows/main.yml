@@ -22,8 +22,8 @@ jobs:
           cache: 'pip'
       - name: Install requirements
         run: |
-          pip install -r pip setuptools wheel
-          pip install -r requirements.txt
+          python3 -m pip install --upgrade pip setuptools wheel
+          python3 -m pip install -r requirements.txt
       - name: Generate images
         run: |
           python3 --version
