@@ -115,6 +115,9 @@ class GenerateImages:
                      repos,
                      output)
 
+        # Debug what repos the action is requesting
+        print(await self.__stats.repos)
+
         collaborators = f"{await self.__stats.collaborators:,}"
         output = sub("{{ collaborators }}",
                      collaborators,
